@@ -4,13 +4,10 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
 
-	var buf = fs.readFile('index.html', 'utf8', function (err) {
-  		if (err) throw err;
-  		console.log('It\'s saved!');
-	});
+	var buf = fs.readFileSync("index.html");
 
 	
-
+	console.log(buf);
   	response.send(buf);
 });
 
