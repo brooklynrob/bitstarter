@@ -99,7 +99,10 @@
       }
     </style>
   </head>
+  <body>
 
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -116,60 +119,51 @@
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-          </div>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-
-
-
-
-	<body>
-
-
-			<div class="container">
-				<div class="row navigation">
-					<div class="span2 logo">
-						Logo
-					</div>
-					<div class="span6 blank">
-						Blank
-					</div>
-					<div class="span4 about">
-						About Best Practices Exchange
-					</div>
-				</div>
-				<div class="row heading">
-					<div class="span12">
-						<h1>Best Practices Exchange</h1>
-					</div>
-				</div>
-				<div class="span12">
-					<p class="lead">Rob Underwood's first bitstarter project.</p>
-				</div>
-			</div>
-
-
-
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+    <!-- http://stackoverflow.com/a/12270322 -->
+    <div class="container">
+      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+      <!-- www.google.com/fonts/specimen/Ubuntu -->
+      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+      <div class="row-fluid heading">
+        <div class="span12">
+          <h1>Product: Development Version</h1>
+        </div>
+      </div> 
+      <div class="row-fluid subheading">
+        <div class="span12">
+          <!-- Special typography from Bootstrap for lead paragraph. -->
+          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+          <p class="lead">One sentence description.</p>
+        </div>
+      </div>
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+          <img class="img-polaroid" alt="Placeholder" src="http://placehold.it/480x300">
         </div>
 
-
+        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
+          <div class="row-fluid">
           <div class="span8 offset2">
-            <div class="statistics">
+            <div class="row-fluid statistics">
               <div class="span4">
- 
+                <!-- linediv-l and linediv-r give dividing lines that look
+                different in horizontal and vertical layouts, illustrating
+                media queries. -->
                 <div class="linediv-l">
-                <h3>500</h3> <p>backers</p>
+                <h3>1000</h3> <p>backers</p>
                 </div>
               </div>
               <div class="span4">
                 <div class="linediv-c">
-                  <h3>$2500</h3> <p>of $5,000</p>
+                  <h3>$6000</h3> <p>of $10,000</p>
                 </div>
               </div>
               <div class="span4">
@@ -179,22 +173,32 @@
               </div>
             </div>
           </div>
+          <div class="row-fluid">
           <div class="span10 offset1">
-
+            <!-- Bootstrap progress bar -->
+            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
             <div class="thermometer progress active">
               <div class="bar bar-success" style="width: 60%;"></div>
               <div class="bar bar-warning" style="width: 40%;"></div>
             </div>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span6 offset3 order">
-
+            <!-- Standard Bootstrap button. -->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
             <button class="btn btn-success btn-large">Preorder</button>
           </div>
-          <div class="span8 offset2 social">
-
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter @ ...</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Like Us on Facebook</button>
           </div>
+          <div class="row-fluid">
+          <div class="span8 offset2 social">
+            <!-- Social buttons are not included in default Bootstrap. -->
+            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+          </div>
+          </div>
+        </div>
         </div>
       </div>
 
@@ -204,11 +208,11 @@
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
         </div>
         <div class="span5 copy">
           <p>
-            Premise:
+              Premise:
 Most Consulting is based on cost-takeout, i.e., "bottom line improvement" (Sure a sliver of the industry does growth strategy, but even a lot of that really is cost take out, doing more with less -- doubling revenue with half the sales staff)
 Most of this cost take out happens in one of two ways, which are inter-related, and form the bulk of consulting revenue
 Application of "best practices" or "leading practices", especially around process design
@@ -222,7 +226,8 @@ This is a 28 year old MBAs writing decks
 What companies really want is the IP - the "secrets" ... but they are charged through a licensing arrangement, but through a professional services arrangement
 For software - let's say an SAP customization for example, it's the same thing... they'd really want to the trick, not the hour of work
 Most consulting work happens in process areas that are NOT strategic or market differentiating to the company - think accounts payable
-Most "best practices" are really the "average" practices of the last 2-3 clients a consultant was at. They are NOT doing the old school Japanese model "Bench marking for Best Practices" stuff
+Most "best practices" are really the "average" practices of the last 2-3 clients a consultant was at. They are NOT doing the old school Japanese model "Bench marking for Best Practices" stuff 
+
 
           </p>
         </div>
@@ -245,11 +250,13 @@ Most "best practices" are really the "average" practices of the last 2-3 clients
           </p>
         </div>
         <div class="span5 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
         </div>
       </div>
 
-
+      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
       <div class="row-fluid faq">
           <div class="span10 offset1">
             <h3>FAQ</h3>
@@ -284,9 +291,20 @@ Most "best practices" are really the "average" practices of the last 2-3 clients
           </div>
 
       </div>
-\
+
+      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
+      <!-- http://creativecommons.org/licenses/ -->
+      <div class="row-fluid footer">
+        <div class="span12">
+          <p>This work is licensed under
+            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+              By-SA 3.0
+            </a>, without all the cruft that would otherwise be
+            put at the bottom of the page.</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
-
 
 
